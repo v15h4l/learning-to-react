@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
 import Person from './Person/Person.js';
 import UserInput from './TwoWayBindingAssgn/UserInput';
 import UserOutput from './TwoWayBindingAssgn/UserOutput';
 import Validation from './ConditionalsAndListsAssgn/Validation';
 import Char from './ConditionalsAndListsAssgn/Char'
+
 class App extends Component {
 
   state = {
@@ -35,8 +36,8 @@ class App extends Component {
     });
 
     return (
-      <div className="App">
-        <div style={this.style} >This is a react app</div> 
+      <div className={styles.App}>
+        <div className={styles.ReactClass} >This is a react app</div> 
         <Person name="Bauaa"> My lastname: Singh  </Person>
         <UserInput userName={this.state.userName} nameChangeHandler = {this.nameChangeHandler}/>
         <UserOutput userName = {this.state.userName}/>
